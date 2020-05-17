@@ -1,15 +1,15 @@
-let numbers = [];
-let number; 
-let avg;
+let sum = 0;
+let count = 0;
+let number;
 
 do {
-	number = parseFloat(prompt('Введите число:', ''));
-	if (number) {
-		numbers.push(number);
-		avg = numbers.reduce((a, b) => a + b, 0)/numbers.length;
-		console.log('Среднее арифметическое чисел равно: ' + avg);
+	number = prompt('Введите число:', '');
+	if (number != '') {
+		sum += parseFloat(number);
+		count++;
+		console.log('Среднее арифметическое чисел равно: ' + sum/count);
 	}
 
 } while (number);
 
-alert('Среднее арифметическое чисел равно: ' + avg);
+alert('Среднее арифметическое чисел равно: ' + sum/count);

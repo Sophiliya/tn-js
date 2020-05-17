@@ -11,9 +11,9 @@ let type      = 9;
 let user      = 123456;
 
 const a = timestamp.toString(16);
-const b = claster.toString(16);
+const b = claster.toString(16).padStart(2, 0);
 const c = type.toString(16);
-const d = user.toString(16);
+const d = user.toString(16).padStart(6, 0);
 
 const id = a + b + c + d;
 

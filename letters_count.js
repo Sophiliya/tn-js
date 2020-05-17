@@ -5,7 +5,7 @@ let consonantsCount = 0;
 for(let char of text) {
 	if ('aeiou'.includes(char))
 		vowelsCount += 1;
-	else if (char != ' ')
+	else if (/[A-Za-z]/.test(char))
 		consonantsCount += 1;
 }
 
