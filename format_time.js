@@ -1,7 +1,7 @@
 // let time = prompt('Enter time:', '');
 let time = '12: 00 pm'
 
-let timeParts = time.split(/[^A-Za-z0-9]/).filter(item => /[0-9]/.test(parseInt(item))); 
+let timeParts = time.split(/[^A-Za-z0-9]/).filter(item => !Number.isNaN(parseInt(item))); 
 let hh = parseInt(timeParts[0]);
 let mm = parseInt(timeParts[1]);
 let timePartsValid = hh <= 12 && mm <= 59
