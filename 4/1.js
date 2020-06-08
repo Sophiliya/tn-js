@@ -14,7 +14,7 @@ function sumOfPositive(numbers) {
 
 		return { count: positive.length, sum: sum }
 	} catch(e) {
-		return e.message 
+		return e 
 	}
 }
 

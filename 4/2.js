@@ -13,12 +13,12 @@ function wordStat(text) {
 				sum += word.charCodeAt(i);
 			}
 
-			return { word: word, sum: sum }
+			return { word, sum }
 		});
 
 		return codes;
 	} catch(e) {
-		return e.message;
+		return e;
 	}
 }
 
