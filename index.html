@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Testing</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-    <!-- добавляем фреймворк тестирования mocha -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
-    <!-- добавим chai -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
-    <script>
-        // chai предоставляет большое количество функций. Объявим assert глобально
-        var assert = chai.assert;
-    </script>
-</head>
-<body>
-<script src="4/1.js"></script>
-<script src="4/1.test.js"></script>
-<script src="4/2.js"></script>
-<script src="4/2.test.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM structure</title>
+    </head>
+    <body>
+        <div id="details">
+            <h1>Навигация по DOM дереву</h1>
+        </div>
+        <div id="flight-details"></div>
 
-<!-- элемент с id="mocha" будет содержать результаты тестов -->
-<div id="mocha"></div>
-
-<!-- запускаем тесты! -->
-<script>
-    mocha.run();
-</script>
-</body>
+        <script src="5/documentStructure.js"></script>
+        <script src="5/flightDetails.js"></script>
+    </body>
 </html>
