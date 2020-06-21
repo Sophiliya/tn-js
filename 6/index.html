@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>events</title>
+        <style>
+            #container {
+                display: block;
+                margin: 20px auto;
+                max-width: 500px;
+            }
+
+            table {
+                display: block;
+                margin: 20px auto;
+            }
+
+            table tr td {
+                width: 10px;
+                height: 10px;
+                border: 1px solid gray;
+            }
+
+            #color_picker {
+                margin: 10px;
+            }
+
+            .color-block {
+                display: inline-block;
+                width: 80px;
+                height: 20px;
+                border: 3px solid white;
+                cursor: pointer;
+            }
+
+            .choosen {
+                border-color: #EFEFEF;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="colorSelector">
+                <div class="color-block color-1 choosen" data-code="EFF3F8" style="background-color: #EFF3F8;"></div>
+                <div class="color-block color-1" data-code="2C4001" style="background-color: #2C4001;"></div>
+                <div class="color-block color-2" data-code="D95436" style="background-color: #D95436;"></div>
+                <div class="color-block color-3" data-code="476D88" style="background-color: #476D88;"></div>
+                <div class="color-block color-4" data-code="60487F" style="background-color: #60487F;"></div>
+            </div>
+        </div>
+
+        <script src="depicting.js"></script>
+    </body>
+</html>
