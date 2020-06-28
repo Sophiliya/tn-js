@@ -4,10 +4,10 @@ let currentColor = selectedColorBlock.dataset.code;
 const createTable = (size) => {
 	const table = document.createElement("table");
 
-	for (trIndex = 0; trIndex < size; trIndex++) {
+	for (let trIndex = 0; trIndex < size; trIndex++) {
 		const tr = document.createElement("tr");
 
-		for (tdIndex = 0; tdIndex < size; tdIndex++) {
+		for (let tdIndex = 0; tdIndex < size; tdIndex++) {
 		  const td = document.createElement("td");
 		  tr.append(td);
 		}
@@ -19,7 +19,7 @@ const createTable = (size) => {
 };
 
 const selectColor = (e) => {
-	if (!e.target.className.includes('color-block')) return;
+	if (!e.target.classList.contains('color-block')) return;
 
 	if (selectedColorBlock) {
 		selectedColorBlock.classList.remove('choosen');
@@ -29,7 +29,6 @@ const selectColor = (e) => {
 	selectedColorBlock.classList.add('choosen');
 
 	currentColor = `#${e.target.dataset.code}`;
-	console.log('Current color:', currentColor);
 };
 
 const handleDrawing = (e) => {
@@ -44,10 +43,10 @@ const handleDrawing = (e) => {
 	}
 }
 
-document.getElementById("container").append(createTable(28));
+const table = createTable(28);
+document.getElementById("container").prepend(table);
 
 const colorsBlock = document.getElementById("colorSelector");
-const table = document.getElementsByTagName('table')[0];
 
 colorsBlock.addEventListener('click', selectColor);
 table.addEventListener("mouseover", handleDrawing);
